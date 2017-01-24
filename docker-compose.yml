@@ -4,4 +4,4 @@
             image: gps2trip
             volumes:
              - $HOST_VOLUME_FOLDERPATH:$CONTAINER_VOLUME_FOLDERPATH
-            command: Rscript /home/gps2trip/estimate_yesterday_bat.R /home/gps2trip/ /home/google-transit/ $INPUT_DATA_FOLDERPATH $OUTPUT_DATA_FOLDERPATH $DATA_FORMAT
+            command: Rscript /home/gps2trip/estimate_yesterday_bat.R /home/gps2trip/ $GTFS_FOLDERPATH $INPUT_DATA_FOLDERPATH $OUTPUT_DATA_FOLDERPATH $DATA_FORMAT

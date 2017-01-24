@@ -18,7 +18,3 @@ RUN git clone https://github.com/analytics-ufcg/gps2trip.git /home/gps2trip
 # Install busminer packages with dependencies
 RUN R -e 'install.packages("devtools", repos = "http://cran.rstudio.com/"); library(devtools); install_github("analytics-ufcg/busminer")'
 
-# Download Curitiba GTFS
-RUN mkdir -p /home/ctba-gtfs
-RUN wget -O google-transit.zip "https://drive.google.com/uc?export=download&id=0B3NoFHg_3tQrSzF5TUdOZmZSMFU" -P /home/ctba-gtfs
-RUN unzip /home/ctba-gtfs/google-transit.zip
